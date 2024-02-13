@@ -5,10 +5,10 @@ const handler = async (req, res) => {
   if (req.method !== "POST") {
     return;
   }
-
+// request body is an object with email and password
   const { email, password } = req.body;
 
-  // check for data validity
+  // check for data validity on the server side
   if (
     !email ||
     !email.includes("@") ||
